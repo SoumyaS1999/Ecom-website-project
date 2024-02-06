@@ -1,0 +1,10 @@
+.rows {
+    display: flex;
+    justify-content: space-between; /* or any other flex properties as needed */
+}
+
+.items {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
