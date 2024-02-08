@@ -1,11 +1,12 @@
 import React from 'react'
+import './About.css'
 
 const About = () => {
   return (
     <section id="about">
       <h2>About</h2>
       <div>
-        <img
+        <img className='aboutimg'
           src="https://prasadyash2411.github.io/ecom-website/img/Band%20Members.png"
           alt=""
         />
