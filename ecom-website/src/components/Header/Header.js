@@ -21,6 +21,7 @@ const Header = () => {
       <Link className='links' to="/about"><h3>About</h3></Link>
       <Link className='links'to="/store"><h3>Store</h3></Link>
       <Link className='links' to="/movie"><h3>Movie</h3></Link>
+      <Link className='links' to="/contactus"><h3>Contact Us</h3></Link>
       
       </Nav>
       <button className='cartbtn' onClick={handleCartClick}><h3>Cart</h3></button>
