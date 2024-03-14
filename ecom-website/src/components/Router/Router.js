@@ -4,13 +4,15 @@ import About from "../Layouts/About";
 import Index from "../Index/Index";
 import Movie from "../Movies/Movie";
 import Contactus from "../Contactus/Contactus";
+import ProductDetail from "../Products/ProductDetail";
 
 const routePath = {
   Home: "/",
   Store: "/store",
   About: "/about",
   Movie: "/movie",
-  Contactus: "/contactus"
+  Contactus: "/contactus",
+  Productdetail:"/store/:id"
 };
 
 const Routers = () => {
@@ -22,6 +24,7 @@ const Routers = () => {
         <Route path={routePath.About} element={<About />} />
         <Route path={routePath.Movie} element={<Movie />} />
         <Route path={routePath.Contactus} element={<Contactus />} />
+        <Route path={routePath.Productdetail} element={<ProductDetail />} />
       </Routes>
     
   );

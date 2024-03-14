@@ -2,7 +2,7 @@
 import {Nav,Container} from 'react-bootstrap';
 import './Header.css'
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Cart from '../Cart/Cart'; // Import the Cart component
 
 const Header = () => {
@@ -17,11 +17,11 @@ const Header = () => {
       <h1>The Generics</h1>
       <Container className='navbar'>
       <Nav id ="linklist" className='linklist'>
-      <Link className='links' to="/"><h3>Home</h3></Link>
-      <Link className='links' to="/about"><h3>About</h3></Link>
-      <Link className='links'to="/store"><h3>Store</h3></Link>
-      <Link className='links' to="/movie"><h3>Movie</h3></Link>
-      <Link className='links' to="/contactus"><h3>Contact Us</h3></Link>
+      <NavLink className='links' to="/"><h3>Home</h3></NavLink>
+      <NavLink className='links' to="/about"><h3>About</h3></NavLink>
+      <NavLink className='links'to="/store"><h3>Store</h3></NavLink>
+      <NavLink className='links' to="/movie"><h3>Movie</h3></NavLink>
+      <NavLink className='links' to="/contactus"><h3>Contact Us</h3></NavLink>
       
       </Nav>
       <button className='cartbtn' onClick={handleCartClick}><h3>Cart</h3></button>

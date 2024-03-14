@@ -2,6 +2,7 @@ import React ,{useContext}from 'react';
 import Products from '../../Products.json';
 import { Container, Row, Col,Button} from 'react-bootstrap';
 //import 'bootstrap/dist/css/bootstrap.min.css';  // Import the Bootstrap CSS
+import { Link } from 'react-router-dom';
 import './ProductList.css';
 import CartContext from '../Store/cart-context';
 
@@ -24,6 +25,7 @@ const addToCart = (item) => {
             <h1>Product-List:</h1>
             <Row className='rows'>
                 {productlist.map((item) => (
+                <Link to={`${item.title}`}>
                 <Col key={item.title} sm={12} md={6} lg={6} xl={6}>
                     <div className="product-item">
                     <h3>{item.title}</h3>
@@ -38,6 +40,7 @@ const addToCart = (item) => {
                     </div>
                    
                 </Col>
+                </Link>
     ))}
             </Row>
 

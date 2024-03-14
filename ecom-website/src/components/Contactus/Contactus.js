@@ -16,20 +16,20 @@ const Contactus = () => {
         phoneNumber: phoneNumber
       };
   
-      // Call the addMovieHandler function to send the form data to Firebase
+      
       await addMovieHandler(formData);
   
-      // Clear form fields after successful submission
+      
       setName('');
       setEmail('');
       setPhoneNumber('');
       
-      // Optionally, you can display a success message or perform any other actions upon successful submission
+      
       console.log('Form submitted successfully');
     } catch (error) {
-      // Handle any errors that occur during form submission
+      
       console.error('Error submitting form:', error);
-      // Optionally, you can display an error message to the user
+    
     }
   };
   
