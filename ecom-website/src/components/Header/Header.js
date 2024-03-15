@@ -28,23 +28,23 @@ const Header = () => {
       <NavLink className='links'to="/store"><h3>Store</h3></NavLink>
       <NavLink className='links' to="/movie"><h3>Movie</h3></NavLink>
       <NavLink className='links' to="/contactus"><h3>Contact Us</h3></NavLink>
-      <ul>
+      
           {!isLoggedIn && (
-            <li>
-              <Link to="/auth">Login</Link>
-            </li>
+            
+              <NavLink className='links' to="/login"><h3>Login</h3></NavLink>
+            
           )}
           {isLoggedIn && (
-            <li>
-              <Link to="/profile">Profile</Link>
-            </li>
+            
+              <NavLink className='links' to="/profile"><h3>Profile</h3></NavLink>
+            
           )}
           {isLoggedIn && (
-            <li>
+            
               <button>Logout</button>
-            </li>
+            
           )}
-        </ul>
+        
 
       
       </Nav>
