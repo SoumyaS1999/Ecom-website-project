@@ -5,6 +5,9 @@ import Index from "../Index/Index";
 import Movie from "../Movies/Movie";
 import Contactus from "../Contactus/Contactus";
 import ProductDetail from "../Products/ProductDetail";
+import AuthForm from "../Auth/Authform";
+import UserProfile from "../Profile/UserProfile";
+//import AuthContext from "../Store/auth-context";
 
 const routePath = {
   Home: "/",
@@ -12,10 +15,17 @@ const routePath = {
   About: "/about",
   Movie: "/movie",
   Contactus: "/contactus",
-  Productdetail:"/store/:id"
+  Productdetail:"/store/:id",
+  Login:"/login",
+  Profile:"/profile"
 };
 
 const Routers = () => {
+
+ // const authCtx = useContext(AuthContext);
+
+ // const isLoggedIn = authCtx.isLoggedIn;
+
   return (
     
       <Routes>
@@ -25,6 +35,9 @@ const Routers = () => {
         <Route path={routePath.Movie} element={<Movie />} />
         <Route path={routePath.Contactus} element={<Contactus />} />
         <Route path={routePath.Productdetail} element={<ProductDetail />} />
+        <Route path={routePath.Login} element={<AuthForm />} />
+        <Route path={routePath.Profile} element={<UserProfile />} />
+
       </Routes>
     
   );
