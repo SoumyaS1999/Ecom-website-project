@@ -1,7 +1,7 @@
 import classes from './ProfileForm.module.css';
 import AuthContext from '../Store/auth-context';
 import { useContext, useRef } from 'react';
-//import { useHistory } from 'react-router-dom';
+
 
 const ProfileForm = () => {
 
@@ -31,6 +31,7 @@ const ProfileForm = () => {
       }
     ).then((res) => {
       alert('Password Changed')
+      
     });
   };
 

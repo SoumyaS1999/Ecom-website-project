@@ -38,7 +38,7 @@ const Routers = () => {
         <Route path={routePath.Productdetail} element={<ProductDetail />} />
         {!authCtx.isLoggedIn && (<Route path={routePath.Login} element={<AuthForm />} />)}
         {authCtx.isLoggedIn && (<Route path={routePath.Profile} element={<UserProfile />} />)}
-        <Route path="*" element={<About />}/> 
+        <Route path="*" element={<Index />}/> 
 
       </Routes>
     
