@@ -2,7 +2,7 @@
 import {Nav,Container} from 'react-bootstrap';
 import './Header.css'
 import React, { useState , useContext} from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { NavLink } from "react-router-dom";
 import Cart from '../Cart/Cart'; // Import the Cart component
 import AuthContext from "../Store/auth-context";
@@ -17,6 +17,10 @@ const Header = () => {
   const authCtx = useContext(AuthContext);
 
   const isLoggedIn = authCtx.isLoggedIn;
+
+  const logoutHandler= ()=>{
+    authCtx.logout();
+  }
 
   return (
     <div className='header'>
@@ -41,7 +45,7 @@ const Header = () => {
           )}
           {isLoggedIn && (
             
-              <button>Logout</button>
+              <button onClick={logoutHandler}>Logout</button>
             
           )}
         
